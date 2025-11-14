@@ -10,6 +10,10 @@ const app = express();
 // Esto le dice a Express que interprete el cuerpo (body) de las peticiones POST/PUT como JSON
 app.use(express.json());
 
+// Servir archivos estáticos
+// Esto le dice a Express que use la carpeta 'public' para servir archivos
+app.use(express.static('public'));
+
 // 3. Definir el puerto
 const PUERTO = process.env.PORT || 5000; // Usamos el puerto de .env o el 5000
 
